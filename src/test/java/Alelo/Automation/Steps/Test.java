@@ -21,7 +21,7 @@ public class Test  {
 	public ChromeOptions chromeOptions;
 	public WebDriverWait wait;
 	public Google google;
-	Filme filme = new Filme((long) 2009, "Quentin");
+	public Filme filme = new Filme((long) 2009, "Quentin");
 	
 	List<Filme> listaFilmes = new ArrayList<Filme>();
 	
@@ -73,7 +73,7 @@ public class Test  {
 	    // Write code here that turns the phrase above into concrete actions
 		
 		filme.setAno_lancamento((long) 2009);
-		filme.setNome_Filme("Hostel");
+		filme.setNome_Filme("Kill Bill");
 		
 		listaFilmes.add(filme);
 		
@@ -105,6 +105,11 @@ public class Test  {
 		System.out.println("Busca Realizada");
 		
 		google.validarQuantidadeResultadorBuscaDiretorFilme("Quentin");
+		
+		for (int i = 0; i < listaFilmes.size(); i++) {
+			System.out.println(listaFilmes.get(i));
+
+		}
 		
 		driver.quit();
 		
